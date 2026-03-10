@@ -1,0 +1,38 @@
+name: Build APK
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Gradle 8.4
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.4'
+
+      - name: Generate Gradle Wrapper
+        run: |
+          cd NotificationEdgePanel_v2
+          gradle wrapper --gradle-version 8.4
+
+      - name: Build APK
+        run: |
+          cd NotificationEdgePanel_v2
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace --info 2>&1 | grep -E "error:|warning:|e:|w:|Unresolved|compileDebugKotlin|BUILD" | tail -60
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug
+          path: NotificationEdgePanel_v2/app/build/outputs/apk/debug/app-debug.apk
