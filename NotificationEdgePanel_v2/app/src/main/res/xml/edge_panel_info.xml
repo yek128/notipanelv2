@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Samsung Edge Panel (Cocktail) 메타데이터 파일
+    엣지 패널의 크기, 레이아웃, 이름을 정의함
+-->
+<cocktail-provider
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cocktailLayout="@layout/edge_panel"
+    android:helpLayout="@layout/edge_panel_help"
+    android:label="@string/edge_panel_name"
+    android:icon="@mipmap/ic_launcher">
+</cocktail-provider>

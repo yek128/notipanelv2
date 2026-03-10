@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="badge_count" type="id"/>
+    <item name="list_container" type="id"/>
+    <item name="empty_view" type="id"/>
+    <item name="notification_list" type="id"/>
+    <item name="btn_clear_all" type="id"/>
+    <item name="item_root" type="id"/>
+    <item name="iv_app_icon" type="id"/>
+    <item name="tv_app_name" type="id"/>
+    <item name="tv_title" type="id"/>
+    <item name="tv_message" type="id"/>
+    <item name="tv_time" type="id"/>
+    <item name="tv_panel_title" type="id"/>
+    <item name="panel_scroll_view" type="id"/>
+    <item name="panel_notif_container" type="id"/>
+</resources>

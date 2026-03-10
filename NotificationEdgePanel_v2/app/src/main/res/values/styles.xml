@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NotificationEdge" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#5E35B1</item>
+        <item name="colorPrimaryVariant">#4527A0</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">#1A1A2E</item>
+    </style>
+</resources>
